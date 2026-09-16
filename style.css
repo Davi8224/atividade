@@ -1,0 +1,23 @@
+html{
+    background-color: black;
+}
+header{
+    color: white;
+    text-align: center;
+    font-size: large;
+}
+div{
+    color: white;
+    text-align: center;
+    width: auto;
+    margin: 10px auto;
+}
+footer{
+    color: white;
+    text-align: center;
+}
+p{
+    font-size: large;
+    border: 1px solid;
+    border-color: aliceblue;
+}
