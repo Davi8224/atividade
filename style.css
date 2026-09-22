@@ -1,23 +1,98 @@
+:root {
+  --base-color: white;
+  --base-variant: #e8e9ed;
+  --text-color: black;
+  --secondary-text:#232738;
+  --primary-color: grey;
+  --accent-color: blue;
+}
+
+.darkmode {
+    --base-color: black;
+    --base-variant: #101425;
+    --text-color: white;
+    --secondary-text: #a4a5b8;
+    --primary-color: #3a435d;
+    --accent-color: blue;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
 html{
-    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    background-color: var(--base-color);
+    color: var(--text-color);
 }
 header{
-    color: white;
     text-align: center;
-    font-size: large;
-}
-div{
-    color: white;
-    text-align: center;
-    width: auto;
-    margin: 10px auto;
-}
-footer{
-    color: white;
-    text-align: center;
+    color: var(--secondary-text);
+    font-size: 50px
 }
 p{
-    font-size: large;
-    border: 1px solid;
-    border-color: aliceblue;
+    margin: 10px;
+    color: var(--secondary-text);
+}
+div{
+    text-align: center;
+    color: var(--secondary-text);
+    margin-top: 30px;
+}
+
+button{
+    border: none;
+    padding: 0.8em 2em;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 4px;
+    font:inherit;
+    text-transform: uppercase;
+    font-weight: 500;
+    cursor:pointer
+}
+
+#mudar{
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--base-variant);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+#mudar span:last-child{
+    display: none;
+}
+
+#mudar:hover{
+    background-color: var(--accent-color);
+    transition: background-color 0.2 ease;
+}
+
+.darkmode #mudar span:first-child{
+    display:none;
+}
+
+.darkmode #mudar span:last-child{
+    display:block;
+}
+
+.darkmode #mudar{
+    background-color: #3a435d;
+    box-shadow: 0 0 12px rgba(0, 113, 255, 0.4);
+}
+
+footer{
+    text-align: center;
+    margin-top: 50px;
 }
